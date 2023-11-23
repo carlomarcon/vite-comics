@@ -32,6 +32,8 @@ header {
   align-items: center;
 
   .logo {
+    display: flex;
+    align-items: center;
     img {
       width: 80px;
       height: 80px;
@@ -39,13 +41,24 @@ header {
   }
 
   .list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    padding-top: 41px;
     ul {
       list-style-type: none;
+      height: 100%;
 
       li {
         display: inline-block;
         margin: 1rem;
         font-size: 10px;
+        height: 100%;
+
+        &:hover {
+          border-bottom: 3px solid blue;
+        }
       }
     }
   }

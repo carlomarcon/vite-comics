@@ -4,27 +4,32 @@ export default {
     return {
       imgObject: [
         {
-          image: "../assets/img/buy-comics-digital-comics.png",
+          image: "buy-comics-digital-comics.png",
           name: "DIGITAL COMICS",
         },
         {
-          image: "../assets/img/buy-comics-merchandise.png",
+          image: "buy-comics-merchandise.png",
           name: "DC MERCHANDISE",
         },
         {
-          image: "../assets/img/buy-comics-subscriptions.png",
+          image: "buy-comics-subscriptions.png",
           name: "SUBSCRIPTION",
         },
         {
-          image: "../assets/img/buy-comics-shop-locator.png",
+          image: "buy-comics-shop-locator.png",
           name: "COMIC SHOP LOCATOR",
         },
         {
-          image: " ../assets/img/buy-dc-power-visa.svg",
+          image: " buy-dc-power-visa.svg",
           name: "DC POWER VISA",
         },
       ],
     };
+  },
+  methods: {
+    getImagepath(img) {
+      return new URL(`../assets/img/${img}`, import.meta.url).href;
+    },
   },
 };
 </script>
@@ -34,7 +39,8 @@ export default {
     <div class="Merchandise">
       <ul>
         <li v-for="element in imgObject">
-          <h4>{{ element.name }}</h4>
+          <img :src="getImagepath(element.image)" alt="" />
+          <span>{{ element.name }}</span>
         </li>
       </ul>
     </div>
@@ -93,8 +99,8 @@ body {
     color: white;
   }
   .Merchandise {
-    height: 25%;
-    background-color: deepskyblue;
+    height: 20%;
+    background-color: #0282f9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,6 +114,13 @@ body {
       li {
         display: inline-block;
         margin: 1rem;
+
+        img {
+          height: 40px;
+          width: 35px;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
       }
     }
   }
@@ -116,21 +129,23 @@ body {
     position: relative;
     img {
       position: absolute;
-      right: 20%;
+      right: 10%;
       top: -12%;
-      height: 400px;
+      height: 450px;
       z-index: 0;
       transform: rotate(-25deg);
+      opacity: 0.5;
     }
 
-    height: 60%;
+    height: 65%;
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
     display: flex;
-    padding-top: 1rem;
+    padding-top: 2rem;
     gap: 1rem;
+    align-items: first baseline;
     ul {
       display: inline-block;
       list-style-type: none;
