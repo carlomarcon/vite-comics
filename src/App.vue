@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <section id="Header-section"></section>
+  <AppHeader />
   <section id="Body-section"></section>
   <section id="Footer-section"></section>
 </template>
