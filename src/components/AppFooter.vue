@@ -1,5 +1,28 @@
 <script>
 export default {};
 </script>
-<template></template>
-<style></style>
+<template>
+  <footer>
+    <div>
+      <div>
+        <button></button>
+      </div>
+      <div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</template>
+<style lang="scss">
+footer {
+  height: 20vh;
+  width: 100%;
+  background-color: grey;
+}
+</style>

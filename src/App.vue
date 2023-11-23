@@ -1,6 +1,7 @@
 <script>
 import AppBody from "./components/AppBody.vue";
 import AppFooter from "./components/AppFooter.vue";
+
 import AppHeader from "./components/AppHeader.vue";
 
 export default {
@@ -15,7 +16,7 @@ export default {
 <template>
   <AppHeader />
   <AppBody />
-  <section id="Footer-section"></section>
+  <AppFooter />
 </template>
 
 <style scoped lang="scss">
