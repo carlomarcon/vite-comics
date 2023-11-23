@@ -3,26 +3,42 @@ export default {};
 </script>
 <template>
   <footer>
-    <div>
-      <div>
-        <button></button>
-      </div>
-      <div>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
+    <button>SING-UP NOW!</button>
+    <ul>
+      <li>FOLLOW US</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
   </footer>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 footer {
-  height: 25vh;
+  position: relative;
+  z-index: 1;
+  height: 15%;
   width: 100%;
-  background-color: grey;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: solid 1px cornflowerblue;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      color: blue;
+    }
+  }
 }
 </style>

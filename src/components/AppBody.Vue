@@ -1,90 +1,150 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      imgObject: [
+        {
+          image: "../assets/img/buy-comics-digital-comics.png",
+          name: "DIGITAL COMICS",
+        },
+        {
+          image: "../assets/img/buy-comics-merchandise.png",
+          name: "DC MERCHANDISE",
+        },
+        {
+          image: "../assets/img/buy-comics-subscriptions.png",
+          name: "SUBSCRIPTION",
+        },
+        {
+          image: "../assets/img/buy-comics-shop-locator.png",
+          name: "COMIC SHOP LOCATOR",
+        },
+        {
+          image: " ../assets/img/buy-dc-power-visa.svg",
+          name: "DC POWER VISA",
+        },
+      ],
+    };
   },
 };
 </script>
 <template>
   <body>
-    <div class="Content"><h2>Content goes here..</h2></div>
-    <div class="Selling">
+    <div class="Contents">Content goes here..</div>
+    <div class="Merchandise">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li v-for="element in imgObject">
+          <h4>{{ element.name }}</h4>
+        </li>
       </ul>
     </div>
-    <div class="Items-search">
-      <div>
-        <h2>DC COMICS</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <h2>SHOP</h2>
-        <ul>
-          <li>Shop DC</li>
-          <li>Shop DC Collectibles</li>
-        </ul>
-      </div>
+    <div class="Item">
+      <img src="../assets/img/favicon.ico" alt="" />
 
-      <!-- <h2>DC</h2>
-        <ul>
-          <li>Terms Of Use</li>
-          <li>Privacy policy(New)</li>
-          <li>Ad Choices</li>
-          <li>Advertising</li>
-          <li>Jobs</li>
-          <li>Subscriptions</li>
-          <li>Talent Workshops</li>
-          <li>CPSC certifications</li>
-          <li>ratings</li>
-          <li>Shop Help</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Sites</h2>
-        <ul>
-          <li>DC</li>
-          <li>MAD Magazines</li>
-          <li>DC Kids</li>
-          <li>DC Universe</li>
-          <li>DC Power visa</li>
-        </ul>
-      </div> -->
+      <ul>
+        <h3>DC COMICS</h3>
+        <li>Characters</li>
+        <li>Comics</li>
+        <li>Movies</li>
+        <li>TV</li>
+        <li>Games</li>
+        <li>Videos</li>
+        <li>News</li>
+        <h3>SHOP</h3>
+        <li>Shop DC</li>
+        <li>Shop DC Collections</li>
+      </ul>
+      <ul>
+        <h3>DC</h3>
+        <li>terms Of Use</li>
+        <li>Privacy</li>
+        <li>Ad Choices</li>
+        <li>Advertising</li>
+        <li>Jobs</li>
+        <li>Subscription</li>
+        <li>Talent Workshops</li>
+        <li>CPSC Certifications</li>
+        <li>Ratings</li>
+        <li>Shop Help</li>
+        <li>Contact Us</li>
+      </ul>
+      <ul>
+        <h3>SITES</h3>
+        <li>DC</li>
+        <li>MAD Magazine</li>
+        <li>DC Kids</li>
+        <li>DC Universe</li>
+        <li>DC Power Visa</li>
+      </ul>
     </div>
   </body>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 body {
-  height: 60vh;
+  height: 70%;
   width: 100%;
-  background-color: black;
 
-  .Content {
-    text-align: left;
-    margin-left: 20%;
-    height: 20%;
+  .Contents {
+    height: 15%;
+    background-color: black;
+    display: flex;
+    align-items: center;
 
-    h2 {
+    color: white;
+  }
+  .Merchandise {
+    height: 25%;
+    background-color: deepskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin: 1rem;
+      }
     }
   }
 
-  .Selling {
-    height: 30%;
-    background-color: cornflowerblue;
-  }
-  .Items-search {
-    height: 50%;
+  .Item {
+    position: relative;
+    img {
+      position: absolute;
+      right: 20%;
+      top: -12%;
+      height: 400px;
+      z-index: 0;
+      transform: rotate(-25deg);
+    }
+
+    height: 60%;
+    background-image: url(../assets/img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    padding-top: 1rem;
+    gap: 1rem;
+    ul {
+      display: inline-block;
+      list-style-type: none;
+
+      li {
+        color: grey;
+      }
+
+      h3 {
+        color: white;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+    }
   }
 }
 </style>

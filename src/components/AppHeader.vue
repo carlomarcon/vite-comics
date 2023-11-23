@@ -3,59 +3,49 @@ export default {};
 </script>
 <template>
   <header>
-    <div>
-      <div>
-        <img src="../assets/img/dc-logo.png" alt="Logo-header" />
-      </div>
-      <div>
-        <ol>
-          <li>CHARACTERS</li>
-          <li>COMICS</li>
-          <li>MOVIES</li>
-          <li>TV</li>
-          <li>GAMES</li>
-          <li>COLLECTIBLES</li>
-          <li>VIDEOS</li>
-          <li>FANS</li>
-          <li>NEWS</li>
-          <li>SHOP</li>
-        </ol>
-      </div>
+    <div class="logo">
+      <img src="../assets/img/dc-logo.png" alt="LOGO" />
+    </div>
+    <div class="list">
+      <ul>
+        <li>CHARACTERS</li>
+        <li>COMICS</li>
+        <li>MOVIES</li>
+        <li>TV</li>
+        <li>GAMES</li>
+        <li>COLLECTABLES</li>
+        <li>VIDEOS</li>
+        <li>FANS</li>
+        <li>NEWS</li>
+        <li>SHOP</li>
+      </ul>
     </div>
   </header>
 </template>
-<style lang="scss">
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+<style lang="scss" scoped>
 header {
-  padding: 2rem;
-  height: 15vh;
   width: 100%;
+  height: 15%;
   background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  div {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-
-    div {
-      text-align: center;
-      padding: 20px;
-      align-items: center;
-      img {
-        width: 50px;
-        height: 50px;
-      }
+  .logo {
+    img {
+      width: 80px;
+      height: 80px;
     }
+  }
 
-    div {
-      align-items: center;
+  .list {
+    ul {
+      list-style-type: none;
+
       li {
         display: inline-block;
-        margin: 10px;
+        margin: 1rem;
+        font-size: 10px;
       }
     }
   }
