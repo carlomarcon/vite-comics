@@ -32,7 +32,7 @@ export default {};
 }
 header {
   padding: 2rem;
-  height: 20vh;
+  height: 15vh;
   width: 100%;
   background-color: white;
 

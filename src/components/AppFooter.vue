@@ -21,7 +21,7 @@ export default {};
 </template>
 <style lang="scss">
 footer {
-  height: 20vh;
+  height: 25vh;
   width: 100%;
   background-color: grey;
 }
