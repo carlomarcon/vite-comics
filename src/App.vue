@@ -14,7 +14,7 @@ export default {
 
 <template>
   <AppHeader />
-  <section id="Body-section"></section>
+  <AppBody />
   <section id="Footer-section"></section>
 </template>
 

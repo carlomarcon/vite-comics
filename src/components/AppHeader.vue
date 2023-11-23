@@ -25,10 +25,16 @@ export default {};
   </header>
 </template>
 <style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 header {
   padding: 2rem;
-  height: 40vh;
+  height: 20vh;
   width: 100%;
+  background-color: white;
 
   div {
     height: 100%;
@@ -38,6 +44,7 @@ header {
     div {
       text-align: center;
       padding: 20px;
+      align-items: center;
       img {
         width: 50px;
         height: 50px;
@@ -45,6 +52,7 @@ header {
     }
 
     div {
+      align-items: center;
       li {
         display: inline-block;
         margin: 10px;
