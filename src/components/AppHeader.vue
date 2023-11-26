@@ -25,7 +25,7 @@ export default {};
 <style lang="scss" scoped>
 header {
   width: 100%;
-  height: 15%;
+  height: 8%;
   background-color: white;
   display: flex;
   justify-content: space-between;

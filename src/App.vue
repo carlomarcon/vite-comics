@@ -29,18 +29,24 @@ export default {
   box-sizing: border-box;
 }
 #Wrapper {
-  height: 100vh;
+  height: 1600px;
   width: 100%;
   background-color: aqua;
 
   div {
     padding-left: 120px;
     padding-right: 120px;
+
+    .card {
+      padding: 0;
+      width: calc(100% / 6);
+      height: 50%;
+    }
   }
 
   footer {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 140px;
+    padding-right: 140px;
   }
 }
 </style>
